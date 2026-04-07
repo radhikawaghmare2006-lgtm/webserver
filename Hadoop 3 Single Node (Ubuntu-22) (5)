@@ -6,9 +6,9 @@
 
 # Install Java
 sudo apt-get update
-sudo apt install openjdk-8-jdk openjdk-8-jre -y
+sudo apt install openjdk-17-jdk openjdk-17-jre -y
 sudo apt update
-sudo apt install openjdk-8-jdk openjdk-8-jre -y
+sudo apt install openjdk-17-jdk openjdk-17-jre -y
 
 java -version
 
@@ -38,7 +38,7 @@ sudo chown hduser:hadoop -R /usr/local/hadoop
 readlink -f $(which java)
 nano ~/.bashrc
 
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 export HADOOP_HOME=/usr/local/hadoop
 export PATH=$PATH:$HADOOP_HOME/bin
 export PATH=$PATH:$HADOOP_HOME/sbin
@@ -55,7 +55,7 @@ cd /usr/local/hadoop/etc/hadoop/
 
 #Update hadoop-env.sh
 nano hadoop-env.sh
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 export HADOOP_LOG_DIR=/var/log/hadoop
 sudo mkdir /var/log/hadoop
 sudo chown hduser:hadoop -R /var/log/hadoop
